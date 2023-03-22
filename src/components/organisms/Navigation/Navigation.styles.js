@@ -8,7 +8,7 @@ export const Wrapper = styled.nav`
    flex-direction: column;
    border-right: 1px solid ${({ theme }) => theme.colors.lightPurple};
    justify-content: flex-start;
-   padding: 30px 0;
+   padding: 90px 0;
    position: relative;
    /* background-color: ${({ theme }) => theme.colors.white}; */
    background-color: #4a465f;

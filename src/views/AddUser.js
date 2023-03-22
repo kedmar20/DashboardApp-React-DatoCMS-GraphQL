@@ -34,7 +34,14 @@ const AddUser = () => {
       <ViewWrapper as="form" onSubmit={handleSubmitUser}>
          <Title>Neuen Studenten hinzufügen:</Title>
          <FormField label="Name:" id="name" name="name" value={formValues.name} onChange={handleInputChange} />
-         <FormField label="Fakultät:" id="attendance" name="attendance" value={formValues.attendance} onChange={handleInputChange} />
+         <FormField
+            label="Fakultät:"
+            id="attendance"
+            name="attendance"
+            value={formValues.attendance}
+            onChange={handleInputChange}
+            list="attendance"
+         />
          <FormField label="Semester:" id="average" name="average" value={formValues.average} onChange={handleInputChange} />
          <FormField label="Zustimmung:" id="consent" name="consent" type="checkbox" value={formValues.average} onChange={handleToggleConsent} />
          <Button type="submit">Add</Button>
