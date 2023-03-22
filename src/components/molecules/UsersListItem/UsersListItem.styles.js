@@ -16,18 +16,17 @@ export const Wrapper = styled.li`
 `;
 
 export const StyledAverage = styled.div`
-   width: 75px;
+   width: 85px;
    height: 45px;
-   padding: 5px 5px;
    border-radius: 8px;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    gap: 1px;
-   font-size: ${({ theme }) => theme.fontSize.s};
+   font-size: ${({ theme }) => theme.fontSize.m};
    color: ${({ theme }) => theme.colors.white};
-   font-weight: bold;
+   font-weight: normal;
    background: ${({ theme, value }) => {
       if (value > 3) return theme.colors.error;
       if (value > 2) return theme.colors.warning;

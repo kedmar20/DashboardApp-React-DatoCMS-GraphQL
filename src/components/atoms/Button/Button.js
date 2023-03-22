@@ -7,7 +7,8 @@ export const Button = styled.button`
    background-color: ${({ theme }) => theme.colors.lightPurple};
    border-radius: 20px;
    border: none;
-   font-weight: bold;
+   font-weight: normal;
+
    color: ${({ theme }) => theme.colors.darkGrey};
    cursor: pointer;
 `;

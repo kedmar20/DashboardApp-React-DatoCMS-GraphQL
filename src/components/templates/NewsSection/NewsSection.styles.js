@@ -50,7 +50,7 @@ export const ContentWrapper = styled.div`
    align-items: flex-start;
 
    img {
-      max-width: 300px;
+      max-width: 200px;
       object-fit: contain;
       margin-left: 25px;
    }

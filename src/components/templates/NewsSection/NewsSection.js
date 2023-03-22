@@ -5,7 +5,7 @@ import axios from "axios";
 
 export const query = `
          {
-          allArticles {
+          allArticles { 
             id
             title
             category
