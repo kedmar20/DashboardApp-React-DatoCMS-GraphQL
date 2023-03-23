@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import DeleteButton from "components/atoms/DeleteButton/DeleteButton";
 import { Styledsemester, StyledInfo, Wrapper } from "./UsersListItem.styles";
 
-const UsersListItem = ({ userData: { semester, name, attendance = "0%" } }) => {
+const UsersListItem = ({ userData: { semester, name, fakultaet = "0%" } }) => {
    return (
       <Wrapper>
          <Styledsemester value={semester}>
@@ -15,7 +15,7 @@ const UsersListItem = ({ userData: { semester, name, attendance = "0%" } }) => {
                {name}
                <DeleteButton name={name} />
             </p>
-            <p>Fakultät: {attendance}</p>
+            <p>Fakultät: {fakultaet}</p>
          </StyledInfo>
       </Wrapper>
    );
@@ -25,7 +25,7 @@ UsersListItem.propTypes = {
    userData: PropTypes.shape({
       semester: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      attendance: PropTypes.string,
+      fakultaet: PropTypes.string,
    }),
 };
 

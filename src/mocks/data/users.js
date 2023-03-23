@@ -1,32 +1,32 @@
 export const users = [
    {
       name: "Olga Weiss",
-      attendance: "Navigation",
+      fakultaet: "Navigation",
       semester: "1.1",
    },
    {
       name: "Peter Schiefer",
-      attendance: "Ingenieurwesen",
+      fakultaet: "Ingenieurwesen",
       semester: "3.1",
    },
    {
       name: "Margareta Krobeln",
-      attendance: "Ingenieurwesen",
+      fakultaet: "Ingenieurwesen",
       semester: "3.1",
    },
    {
       name: "Alexander Leber",
-      attendance: "Maschinenbau",
+      fakultaet: "Maschinenbau",
       semester: "1.1",
    },
    {
       name: "Walter Poth",
-      attendance: "Kapitänsschule",
+      fakultaet: "Kapitänsschule",
       semester: "2.1",
    },
    {
       name: "Elke Hutner",
-      attendance: "Navigation",
+      fakultaet: "Navigation",
       semester: "1.1",
    },
 ];

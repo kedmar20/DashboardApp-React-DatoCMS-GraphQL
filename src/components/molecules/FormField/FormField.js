@@ -8,7 +8,7 @@ const FormField = ({ onChange, checked, value, name, id, label, type = "text", .
    // const validationFunc = (value) => {
    //    value.length < 2 ? console.log("too short - try again") : console.log("it's ok");
    // };
-   return !(id === "attendance") ? (
+   return !(id === "fakultaet") ? (
       <Wrapper>
          <Label htmlFor={id}>{label}</Label>
          <Input name={name} id={id} type={type} value={value} onChange={onChange} data-testid={label} checked={checked} />
