@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const StyledButton = styled.button`
-   width: 25px;
-   height: 25px;
-   margin: 0 10px;
-   background-color: ${({ theme }) => theme.colors.lightGrey};
-   border-radius: 50px;
-   border: none;
-   color: red;
-   display: flex;
-   justify-content: center;
    align-items: center;
+   background-color: ${({ theme }) => theme.colors.lightGrey};
+   border: none;
+   border-radius: 50px;
+   color: red;
    cursor: pointer;
+   display: flex;
+   height: 25px;
+   justify-content: center;
+   margin: 0 10px;
+   width: 25px;
 
    svg {
-      width: 100%;
       height: 100%;
+      width: 100%;
    }
 `;

@@ -2,15 +2,15 @@ import { ViewWrapper } from "components/molecules/ViewWrapper/ViewWrapper";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-   grid-row: 2/3;
-   grid-column: 3/4;
+   align-items: center;
    color: ${({ theme }) => theme.colors.white};
    display: flex;
    flex-direction: column;
-   align-items: center;
+   grid-row: 2/3;
+   grid-column: 3/4;
    justify-content: flex-start;
-   padding: 40px;
    overflow-y: scroll;
+   padding: 40px;
 `;
 
 export const NewsSectionHeader = styled.h2`
@@ -18,13 +18,13 @@ export const NewsSectionHeader = styled.h2`
 `;
 
 export const ArticleWrapper = styled(ViewWrapper)`
-   margin: 20px 0;
-   width: 100%;
-   max-width: unset;
    border-radius: 10px;
    color: ${({ theme }) => theme.colors.black};
    font-size: ${({ theme }) => theme.fontSize.m};
+   margin: 20px 0;
+   max-width: unset;
    padding: 20px;
+   width: 100%;
 
    p {
       line-height: 1.6;
@@ -46,12 +46,12 @@ export const TitleWrapper = styled.div`
 `;
 
 export const ContentWrapper = styled.div`
-   display: flex;
    align-items: flex-start;
+   display: flex;
 
    img {
+      margin-left: 25px;
       max-width: 200px;
       object-fit: contain;
-      margin-left: 25px;
    }
 `;
