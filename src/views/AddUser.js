@@ -9,7 +9,7 @@ import { useForm } from "hooks/useForm";
 const initialFormState = {
    name: "",
    attendance: "",
-   average: "",
+   semester: "",
    consent: false,
    error: "",
 };
@@ -22,11 +22,18 @@ const AddUser = () => {
 
    const handleSubmitUser = (e) => {
       e.preventDefault();
-      if (formValues.consent) {
+      console.log(typeof +formValues.semester);
+      if (!formValues.consent) {
+         handleThrowError("Bitte Zustimmen!");
+      } else if (!(formValues.name.length > 2)) {
+         handleThrowError(`"Name" is leider zu kurz! Geben Sie bitte noch mindestens ${3 - formValues.name.length} Zeichen ein!`);
+         // } else if (!(formValues.semester.length > 0)) {
+         // } else if (!(formValues.semester.length > 0) && +formValues.semester > 0) {
+      } else if (!(+formValues.semester > 0)) {
+         handleThrowError(`"Semester" is leider zu kurz! Geben Sie mindestens 1 Zahl ein!`);
+      } else {
          context.handleAddUser(formValues);
          handleClearForm(initialFormState);
-      } else {
-         handleThrowError("Bitte Zustimmen!");
       }
    };
 
@@ -42,8 +49,16 @@ const AddUser = () => {
             onChange={handleInputChange}
             list="attendance"
          />
-         <FormField label="Semester:" id="average" name="average" value={formValues.average} onChange={handleInputChange} />
-         <FormField label="Zustimmung:" id="consent" name="consent" type="checkbox" value={formValues.average} onChange={handleToggleConsent} />
+         <FormField label="Semester:" id="semester" name="semester" value={formValues.semester} onChange={handleInputChange} />
+         <FormField
+            checked={formValues.consent}
+            label="Zustimmung:"
+            id="consent"
+            name="consent"
+            type="checkbox"
+            value={formValues.semester}
+            onChange={handleToggleConsent}
+         />
          <Button type="submit">Add</Button>
          {formValues.error ? <p>{formValues.error}</p> : null}
       </ViewWrapper>

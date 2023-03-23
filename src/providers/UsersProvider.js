@@ -19,7 +19,7 @@ const UsersProvider = ({ children }) => {
       const newUser = {
          name: values.name,
          attendance: values.attendance,
-         average: values.average,
+         semester: values.semester,
       };
       setUsers([newUser, ...users]);
    };
