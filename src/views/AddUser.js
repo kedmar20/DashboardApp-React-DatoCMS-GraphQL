@@ -8,8 +8,8 @@ import { useForm } from "hooks/useForm";
 
 const initialFormState = {
    name: "",
-   attendance: "",
-   average: "",
+   fakultaet: "",
+   semester: "",
    consent: false,
    error: "",
 };
@@ -22,11 +22,18 @@ const AddUser = () => {
 
    const handleSubmitUser = (e) => {
       e.preventDefault();
-      if (formValues.consent) {
+      console.log(formValues.fakultaet);
+      if (!formValues.consent) {
+         handleThrowError("Bitte Zustimmen!");
+      } else if (!(formValues.name.length > 2)) {
+         handleThrowError(`"Name" ist leider zu kurz! Geben Sie bitte noch mindestens ${3 - formValues.name.length} Zeichen ein!`);
+      } else if (!(+formValues.semester > 1 && +formValues.semester < 4)) {
+         handleThrowError(`"Semester" ist falsch geschrieben`);
+      } else if (!formValues.fakultaet) {
+         handleThrowError(`wähle "Fakultät" !`);
+      } else {
          context.handleAddUser(formValues);
          handleClearForm(initialFormState);
-      } else {
-         handleThrowError("Bitte Zustimmen!");
       }
    };
 
@@ -34,16 +41,17 @@ const AddUser = () => {
       <ViewWrapper as="form" onSubmit={handleSubmitUser}>
          <Title>Neuen Studenten hinzufügen:</Title>
          <FormField label="Name:" id="name" name="name" value={formValues.name} onChange={handleInputChange} />
+         <FormField label="Fakultät:" id="fakultaet" name="fakultaet" value={formValues.fakultaet} onChange={handleInputChange} list="fakultaet" />
+         <FormField label="Semester:" id="semester" name="semester" value={formValues.semester} onChange={handleInputChange} />
          <FormField
-            label="Fakultät:"
-            id="attendance"
-            name="attendance"
-            value={formValues.attendance}
-            onChange={handleInputChange}
-            list="attendance"
+            checked={formValues.consent}
+            label="Zustimmung:"
+            id="consent"
+            name="consent"
+            type="checkbox"
+            value={formValues.semester}
+            onChange={handleToggleConsent}
          />
-         <FormField label="Semester:" id="average" name="average" value={formValues.average} onChange={handleInputChange} />
-         <FormField label="Zustimmung:" id="consent" name="consent" type="checkbox" value={formValues.average} onChange={handleToggleConsent} />
          <Button type="submit">Add</Button>
          {formValues.error ? <p>{formValues.error}</p> : null}
       </ViewWrapper>

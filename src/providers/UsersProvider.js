@@ -18,8 +18,8 @@ const UsersProvider = ({ children }) => {
    const handleAddUser = (values) => {
       const newUser = {
          name: values.name,
-         attendance: values.attendance,
-         average: values.average,
+         fakultaet: values.fakultaet,
+         semester: values.semester,
       };
       setUsers([newUser, ...users]);
    };

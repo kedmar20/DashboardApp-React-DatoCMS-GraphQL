@@ -15,7 +15,7 @@ export const Wrapper = styled.li`
    }
 `;
 
-export const StyledAverage = styled.div`
+export const Styledsemester = styled.div`
    width: 85px;
    height: 45px;
    border-radius: 8px;
