@@ -1,4 +1,7 @@
 # Dashboard App with React, CRA, DatoCMS, GraphQL
+### deployment on AWS S3:
+
+### http://dashboardapp-react-datocms-graphql.s3-website.eu-central-1.amazonaws.com 
 
 This App is a Dashboard with:
 - Add User Funcionality,
