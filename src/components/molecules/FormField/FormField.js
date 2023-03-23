@@ -5,9 +5,6 @@ import { Input } from "../../atoms/Input/Input";
 import { Wrapper } from "./FormField.styles";
 
 const FormField = ({ onChange, checked, value, name, id, label, type = "text", ...props }) => {
-   // const validationFunc = (value) => {
-   //    value.length < 2 ? console.log("too short - try again") : console.log("it's ok");
-   // };
    return !(id === "fakultaet") ? (
       <Wrapper>
          <Label htmlFor={id}>{label}</Label>

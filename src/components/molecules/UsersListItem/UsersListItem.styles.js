@@ -1,41 +1,40 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.li`
-   display: flex;
    align-items: center;
+   display: flex;
    position: relative;
 
    &:not(:last-child)::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 1px;
       background-color: lightgrey;
+      bottom: 0;
+      content: "";
+      height: 1px;
+      position: absolute;
+      width: 100%;
    }
 `;
 
 export const Styledsemester = styled.div`
-   width: 85px;
-   height: 45px;
-   border-radius: 8px;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
    align-items: center;
-   gap: 1px;
-   font-size: ${({ theme }) => theme.fontSize.m};
-   color: ${({ theme }) => theme.colors.white};
-   font-weight: normal;
    background: ${({ theme, value }) => {
       if (value > 3) return theme.colors.error;
       if (value > 2) return theme.colors.warning;
       if (value > 1) return theme.colors.success;
       return theme.colors.grey;
    }};
+   border-radius: 8px;
+   color: ${({ theme }) => theme.colors.white};
+   display: flex;
+   flex-direction: column;
+   font-size: ${({ theme }) => theme.fontSize.m};
+   font-weight: normal;
+   gap: 1px;
+   height: 45px;
+   justify-content: center;
+   width: 85px;
+
    p {
-      /* margin-block-start: 0;
-      margin-block-end: 0; */
       margin: 0;
    }
 `;
@@ -44,15 +43,15 @@ export const StyledInfo = styled.div`
    padding: 25px 20px;
 
    p {
-      margin: 0;
       color: ${({ theme }) => theme.colors.white};
+      margin: 0;
    }
 
    p:first-child {
-      display: flex;
       align-items: center;
-      font-weight: bold;
+      display: flex;
       font-size: ${({ theme }) => theme.fontSize.l};
+      font-weight: bold;
    }
 
    p:last-child {

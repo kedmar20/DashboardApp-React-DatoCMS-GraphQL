@@ -20,6 +20,7 @@ export const query = `
 const NewsSection = () => {
    const [articles, setArticles] = useState([]);
    const [error, setError] = useState("");
+   console.log(error);
 
    //
 

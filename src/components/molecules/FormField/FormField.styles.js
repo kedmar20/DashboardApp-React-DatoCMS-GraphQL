@@ -3,13 +3,12 @@ import { Input } from "components/atoms/Input/Input";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-   width: 220px;
-   padding: 15px 0px;
    display: flex;
    flex-direction: column;
-   justify-content: center;
-   /* align-items: center; */
    gap: 5px;
+   justify-content: center;
+   padding: 15px 0px;
+   width: 220px;
 
    ${Label} {
       margin: 1px 18px;
@@ -22,7 +21,7 @@ export const Wrapper = styled.div`
 
    select,
    option {
-      width: 60%;
       font-size: 1rem;
+      width: 60%;
    }
 `;
